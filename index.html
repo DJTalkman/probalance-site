@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ProBalance Biuro Rachunkowe</title>
+<meta name="description" content="ProBalance – biuro rachunkowe dla grup kapitałowych, firm z oddziałami i korporacji. Sprawozdania skonsolidowane, optymalizacja i wybór formy opodatkowania, kadry i płace. Obsługa w całej Polsce.">
+<link rel="canonical" href="https://probalance.pl/">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="biuro rachunkowe, sprawozdanie skonsolidowane, konsolidacja sprawozdań finansowych, optymalizacja podatkowa, wybór formy opodatkowania, estoński CIT, kadry i płace, ceny transferowe, księgowość spółek, grupa kapitałowa">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="ProBalance Biuro Rachunkowe">
+<meta property="og:title" content="ProBalance – księgowość, która pomaga zarabiać więcej">
+<meta property="og:description" content="Sprawozdania skonsolidowane, optymalizacja podatkowa i kadry dla grup kapitałowych, firm z oddziałami i korporacji. Obsługa w całej Polsce.">
+<meta property="og:url" content="https://probalance.pl/">
+<meta property="og:image" content="https://probalance.pl/assets/logo-full.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b2140">
+<link rel="icon" type="image/png" href="assets/logo-mark.png">
+<link rel="apple-touch-icon" href="assets/logo-mark.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "ProBalance Biuro Rachunkowe",
+  "url": "https://probalance.pl/",
+  "email": "biuro.probalance@gmail.com",
+  "telephone": "+48537918612",
+  "description": "Biuro rachunkowe dla grup kapitałowych, firm z oddziałami i korporacji: sprawozdania skonsolidowane, optymalizacja i wybór formy opodatkowania, kadry i płace.",
+  "areaServed": { "@type": "Country", "name": "Polska" },
+  "founder": { "@type": "Person", "name": "Lesia Petrychenko" },
+  "logo": "https://probalance.pl/assets/logo-full.png",
+  "priceRange": "$$"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Przejdź do treści</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<canvas id="bg" class="bg" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="m2 13 10 5 10-5"/><path d="m2 17.5 10 5 10-5"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M4 7h16"/><path d="m4 7-3 7a3 3 0 0 0 6 0L4 7ZM20 7l-3 7a3 3 0 0 0 6 0l-3-7Z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v15H5.5A1.5 1.5 0 0 0 4 19.5v-15Z"/><path d="M4 19.5A1.5 1.5 0 0 0 5.5 21H20M8 7h8M8 11h6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6.5 6.5 0 0 1 3.5 6"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><rect x="2" y="3" width="8" height="6" rx="1"/><rect x="14" y="15" width="8" height="6" rx="1"/><rect x="14" y="3" width="8" height="6" rx="1"/><path d="M10 6h4M18 9v6M6 9v9h8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-7"/><path d="M16 7h4v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2Z"/></symbol>
+</svg>
+
+<header class="hdr" id="top">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top" aria-label="ProBalance – strona główna">
+      <img class="logo" src="assets/logo-mark.png" alt="" width="465" height="414">
+      <span class="brand-t">Pro<b>Balance</b></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Główna nawigacja">
+      <a href="#uslugi">Usługi</a>
+      <a href="#kalkulator">Kalkulator</a>
+      <a href="#konsolidacja">Konsolidacja</a>
+      <a href="#kadry">Kadry</a>
+      <a href="#aktualnosci">Aktualności</a>
+      <a href="#o-nas">O nas</a>
+    </nav>
+    <div class="hdr-actions">
+      <button class="icon-btn" id="theme" type="button" aria-label="Przełącz motyw"><svg class="ic i-sun"><use href="#i-sun"/></svg><svg class="ic i-moon"><use href="#i-moon"/></svg></button>
+      <a class="btn btn-primary btn-sm" href="#kontakt">Bezpłatna analiza</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-expanded="false" aria-controls="nav"><span class="sr-only">Menu</span><span class="bars" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <p class="pill"><svg class="ic"><use href="#i-spark"/></svg>Biuro rachunkowe dla grup kapitałowych · cała Polska</p>
+        <h1>Księgowość, która <span class="grad">pomaga zarabiać</span>, a nie tylko rozlicza.</h1>
+        <p class="lead">Konsolidujemy sprawozdania grup kapitałowych, analizujemy liczby i dobieramy formę opodatkowania tak, aby więcej zysku zostawało w firmie. Skrupulatnie, w całej Polsce.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#kalkulator">Policz swoje podatki <svg class="ic"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#kontakt">Umów rozmowę</a>
+        </div>
+        <ul class="counters" aria-label="Liczby">
+          <li><strong><span class="count" data-to="16">0</span></strong><span>województw obsługi</span></li>
+          <li><strong><span class="count" data-to="5">0</span></strong><span>form opodatkowania w analizie</span></li>
+          <li><strong><span class="count" data-to="24">0</span>h</strong><span>na odpowiedź</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="dash tilt" id="dash">
+          <div class="dash-top">
+            <span class="dash-dot"></span><span class="dash-dot"></span><span class="dash-dot"></span>
+            <span class="dash-title">Grupa Alfa · wynik skonsolidowany 2026</span>
+          </div>
+          <div class="dash-kpis">
+            <div><small>Przychody grupy</small><strong data-money="48200000">0</strong><em class="up">+12,4%</em></div>
+            <div><small>Oszczędność podatkowa</small><strong data-money="612000">0</strong><em class="up">estoński CIT</em></div>
+            <div><small>Spółki i oddziały</small><strong>7</strong><em>3 kraje</em></div>
+          </div>
+          <div class="dash-chart">
+            <svg viewBox="0 0 360 120" preserveAspectRatio="none">
+              <defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e8a9e" stop-opacity=".45"/><stop offset="1" stop-color="#0e8a9e" stop-opacity="0"/></linearGradient></defs>
+              <path class="area" d="M0 95 C40 90 60 70 90 72 S140 55 170 50 S230 40 260 30 S320 22 360 10 V120 H0Z" fill="url(#ag)"/>
+              <path class="line" d="M0 95 C40 90 60 70 90 72 S140 55 170 50 S230 40 260 30 S320 22 360 10" fill="none"/>
+              <circle class="pt" cx="360" cy="10" r="4"/>
+            </svg>
+            <div class="dash-legend"><span>Zysk po podatku</span><span class="mono">sty – wrz</span></div>
+          </div>
+          <ul class="dash-rows">
+            <li><span class="b" style="--w:92%"></span><span>Holding S.A.</span><b>OK</b></li>
+            <li><span class="b" style="--w:74%"></span><span>Alfa Produkcja</span><b>OK</b></li>
+            <li><span class="b" style="--w:58%"></span><span>Alfa Logistyka</span><b>OK</b></li>
+            <li><span class="b b-warn" style="--w:31%"></span><span>Oddział Berlin</span><b>uzgodnienie</b></li>
+          </ul>
+        </div>
+        <div class="chip chip-a"><svg class="ic"><use href="#i-check"/></svg>Sprawozdanie gotowe do badania</div>
+        <div class="chip chip-b"><svg class="ic"><use href="#i-scale"/></svg>CIT vs estoński: −612 000 zł</div>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Sprawozdania skonsolidowane</span><span>Estoński CIT</span><span>Kadry i płace</span><span>Ceny transferowe</span><span>KSeF i JPK_CIT</span><span>Raporty zarządcze</span><span>Grupy kapitałowe</span><span>Oddziały firm zagranicznych</span>
+        <span>Sprawozdania skonsolidowane</span><span>Estoński CIT</span><span>Kadry i płace</span><span>Ceny transferowe</span><span>KSeF i JPK_CIT</span><span>Raporty zarządcze</span><span>Grupy kapitałowe</span><span>Oddziały firm zagranicznych</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec" id="uslugi">
+    <div class="wrap">
+      <header class="head">
+        <p class="label">Usługi</p>
+        <h2>Wszystko, czego potrzebuje <span class="grad">rosnąca grupa</span></h2>
+        <p class="sub">Księgowość, podatki i kadry w jednym zespole. Najedź na kartę, aby zobaczyć, co dokładnie robimy.</p>
+      </header>
+      <div class="grid3 spot-grid">
+        <article class="scard spot">
+          <div class="scard-ic"><svg class="ic"><use href="#i-layers"/></svg></div>
+          <h3>Sprawozdawczość skonsolidowana</h3>
+          <p>Sprawozdania skonsolidowane grup i łączne firm z oddziałami, według UoR lub MSSF.</p>
+          <ul class="scard-list"><li>pakiety konsolidacyjne</li><li>wyłączenia i udziały niekontrolujące</li><li>noty i informacja dodatkowa</li></ul>
+        </article>
+        <article class="scard spot">
+          <div class="scard-ic"><svg class="ic"><use href="#i-scale"/></svg></div>
+          <h3>Optymalizacja podatkowa</h3>
+          <p>Analiza obciążeń i wybór formy opodatkowania na liczbach Twojej firmy.</p>
+          <ul class="scard-list"><li>symulacja 5 form na 1–3 lata</li><li>ulgi: B+R, IP Box, robotyzacja</li><li>plan wypłaty zysku</li></ul>
+        </article>
+        <article class="scard spot">
+          <div class="scard-ic"><svg class="ic"><use href="#i-book"/></svg></div>
+          <h3>Pełna księgowość</h3>
+          <p>Księgi spółek, JPK, e-faktury w KSeF, deklaracje, zamknięcia, sprawozdania do KRS.</p>
+          <ul class="scard-list"><li>KSeF i JPK_CIT</li><li>zamknięcie miesiąca w 10 dni</li><li>e-sprawozdania do KRS</li></ul>
+        </article>
+        <article class="scard spot">
+          <div class="scard-ic"><svg class="ic"><use href="#i-users"/></svg></div>
+          <h3>Kadry i płace</h3>
+          <p>Listy płac, umowy, ZUS, PIT-11, PPK. Jeden standard dla wszystkich lokalizacji.</p>
+          <ul class="scard-list"><li>e-teczki pracownicze</li><li>cudzoziemcy i legalizacja</li><li>kontrole PIP i ZUS</li></ul>
+        </article>
+        <article class="scard spot">
+          <div class="scard-ic"><svg class="ic"><use href="#i-link"/></svg></div>
+          <h3>Ceny transferowe</h3>
+          <p>Dokumentacja lokalna, TPR i spójne rozliczenia między spółkami powiązanymi.</p>
+          <ul class="scard-list"><li>analiza porównawcza</li><li>informacja TPR</li><li>polityka cen w grupie</li></ul>
+        </article>
+        <article class="scard spot">
+          <div class="scard-ic"><svg class="ic"><use href="#i-chart"/></svg></div>
+          <h3>Raporty dla zarządu</h3>
+          <p>Wyniki spółek i oddziałów co miesiąc, rentowność lokalizacji, prognoza podatków.</p>
+          <ul class="scard-list"><li>dashboard online</li><li>rentowność per oddział</li><li>prognoza CIT/VAT</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="sec sec-dark" id="kalkulator">
+    <div class="wrap">
+      <header class="head">
+        <p class="label">Interaktywny kalkulator</p>
+        <h2>Ile zostanie w Twojej kieszeni <span class="grad">przy każdej formie opodatkowania?</span></h2>
+        <p class="sub">Przesuń suwak i porównaj. To szacunek orientacyjny na 2026 r., pełną analizę z Twoimi danymi zrobimy bezpłatnie.</p>
+      </header>
+      <div class="calc">
+        <div class="calc-ctrl">
+          <div class="field-range">
+            <div class="range-head"><label for="income">Roczny dochód (zysk) firmy</label><output id="income-out" for="income">600 000 zł</output></div>
+            <input type="range" id="income" min="100000" max="5000000" step="10000" value="600000">
+            <div class="range-scale"><span>100 tys.</span><span>1 mln</span><span>2,5 mln</span><span>5 mln</span></div>
+          </div>
+          <div class="toggles">
+            <label class="switch"><input type="checkbox" id="payout" checked><span class="sw"></span><span>Wypłacam cały zysk właścicielom</span></label>
+            <label class="switch"><input type="checkbox" id="small" checked><span class="sw"></span><span>Mały podatnik CIT (9% / estoński 10%)</span></label>
+            <div class="field-sel"><label for="ryczalt">Stawka ryczałtu</label>
+              <select id="ryczalt"><option value="0.085">8,5% (usługi)</option><option value="0.12" selected>12% (IT)</option><option value="0.15">15% (pośrednictwo)</option><option value="0.17">17% (wolne zawody)</option><option value="0.055">5,5% (produkcja, budowa)</option></select>
+            </div>
+          </div>
+          <p class="calc-note">Uwzględniamy PIT/CIT, składkę zdrowotną, daninę solidarnościową i podatek od dywidendy. Bez ZUS społecznego, ulg i kosztów uzyskania (ryczałt liczony od przychodu). Szacunek, nie porada podatkowa.</p>
+        </div>
+        <div class="calc-out" id="calc-out" aria-live="polite"></div>
+      </div>
+      <div class="calc-cta">
+        <p>Chcesz dokładną analizę z ulgami, składkami i planem wypłat?</p>
+        <a class="btn btn-primary" href="#kontakt">Zamów bezpłatną analizę <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSOLIDATION -->
+  <section class="sec" id="konsolidacja">
+    <div class="wrap split">
+      <div>
+        <p class="label">Specjalizacja</p>
+        <h2>Sprawozdawczość skonsolidowana <span class="grad">krok po kroku</span></h2>
+        <p class="sub">Grupa kapitałowa, oddziały w kilku miastach, centrala za granicą. Kliknij etap, aby zobaczyć, co się dzieje na każdym z nich.</p>
+        <ol class="steps" id="steps">
+          <li class="active"><button type="button"><span class="n">1</span><span><strong>Pakiety konsolidacyjne</strong><small>jeden format i termin dla każdej spółki</small></span></button></li>
+          <li><button type="button"><span class="n">2</span><span><strong>Uzgodnienie transakcji</strong><small>należności, zobowiązania, sprzedaż w grupie</small></span></button></li>
+          <li><button type="button"><span class="n">3</span><span><strong>Wyłączenia</strong><small>obroty wewnętrzne, niezrealizowane zyski, kapitały</small></span></button></li>
+          <li><button type="button"><span class="n">4</span><span><strong>Sprawozdanie i noty</strong><small>gotowe do badania przez biegłego</small></span></button></li>
+        </ol>
+      </div>
+      <div class="viz" id="viz" data-step="1">
+        <div class="viz-stage">
+          <div class="node parent"><small>Jednostka dominująca</small><strong>Holding S.A.</strong></div>
+          <div class="node-row">
+            <div class="node"><small>Spółka</small><strong>Warszawa</strong></div>
+            <div class="node"><small>Spółka</small><strong>Wrocław</strong></div>
+            <div class="node"><small>Oddział</small><strong>Berlin</strong></div>
+          </div>
+          <div class="flow"><span class="f f1"></span><span class="f f2"></span><span class="f f3"></span></div>
+          <div class="node result"><small>Wynik</small><strong>Skonsolidowane sprawozdanie</strong></div>
+        </div>
+        <p class="viz-cap" id="viz-cap">Każda spółka i oddział przekazuje dane w jednym formacie i terminie.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HR -->
+  <section class="sec sec-soft" id="kadry">
+    <div class="wrap split rev">
+      <div>
+        <p class="label">Kadry i płace</p>
+        <h2>Kadry prowadzone <span class="grad">tak starannie jak księgi</span></h2>
+        <p class="sub">Pracownicy w kilku miastach, różne umowy i systemy czasu pracy. Jeden standard dla całej organizacji i czujność na każdą zmianę w Kodeksie pracy.</p>
+        <a class="btn btn-dark" href="#kontakt">Zapytaj o obsługę kadrową</a>
+      </div>
+      <ul class="hr">
+        <li class="spot"><strong>Listy płac</strong><span>wynagrodzenia, premie, nadgodziny, potrącenia</span></li>
+        <li class="spot"><strong>Umowy i akta</strong><span>umowy o pracę, zlecenia, e-teczki</span></li>
+        <li class="spot"><strong>ZUS i PIT</strong><span>deklaracje, PIT-4R, PIT-11, PPK</span></li>
+        <li class="spot"><strong>Czas pracy</strong><span>ewidencja, urlopy, okresy rozliczeniowe</span></li>
+        <li class="spot"><strong>Cudzoziemcy</strong><span>legalność pobytu i zatrudnienia</span></li>
+        <li class="spot"><strong>Kontrole</strong><span>wsparcie podczas kontroli PIP i ZUS</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec sec-dark" id="o-nas">
+    <div class="wrap about">
+      <div class="photo tilt">
+        <img src="assets/lesia-petrychenko.jpg" alt="Lesia Petrychenko, liderka biura rachunkowego ProBalance" width="1254" height="1254">
+        <div class="photo-tag"><strong>Lesia Petrychenko</strong><span>Liderka ProBalance</span></div>
+      </div>
+      <div>
+        <p class="label">Kto stoi za ProBalance</p>
+        <h2>Lesia Petrychenko</h2>
+        <blockquote>„Dobry księgowy nie tylko rozlicza przeszłość. Pomaga zaplanować, ile firma zarobi, zanim zapadną decyzje.”</blockquote>
+        <p class="sub">Lesia jest sercem i motorem ProBalance. Osobiście nadzoruje obsługę klientów: od wdrożenia po roczne sprawozdanie grupy. Pracuje z zarządami i dyrektorami finansowymi, stawia na rzetelność, terminowość i rozmowę opartą na liczbach.</p>
+        <ul class="vals">
+          <li><svg class="ic"><use href="#i-check"/></svg><span><strong>Skrupulatność</strong> – każdy dokument sprawdzony</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><strong>Analiza</strong> – decyzje oparte na liczbach</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span><strong>Partnerstwo</strong> – jeden opiekun, szybki kontakt</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="sec" id="aktualnosci">
+    <div class="wrap">
+      <header class="head head-row">
+        <div>
+          <p class="label">Aktualności</p>
+          <h2>Zmiany w prawie <span class="grad">podatkowym i kadrowym</span></h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filtruj aktualności" id="news-filters"></div>
+      </header>
+      <div class="news grid3" id="news-list" aria-live="polite"></div>
+      <p class="fine">Aktualności mają charakter informacyjny i opisują stan prawny z dnia publikacji.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec sec-soft" id="faq">
+    <div class="wrap narrow">
+      <header class="head">
+        <p class="label">FAQ</p>
+        <h2>Częste pytania</h2>
+      </header>
+      <div class="faq">
+        <details open>
+          <summary>Czy obsługujecie firmy z całej Polski?</summary>
+          <div class="faq-a"><p>Tak. Dokumenty przyjmujemy elektronicznie, e-faktury pobieramy z KSeF, a spotkania odbywają się online albo na miejscu u klienta.</p></div>
+        </details>
+        <details>
+          <summary>Kto musi sporządzać skonsolidowane sprawozdanie finansowe?</summary>
+          <div class="faq-a"><p>Jednostka dominująca grupy kapitałowej, o ile nie korzysta ze zwolnienia, np. ze względu na wielkość grupy. Sprawdzimy, czy obowiązek dotyczy Twojej grupy i według jakich standardów.</p></div>
+        </details>
+        <details>
+          <summary>Kiedy można zmienić formę opodatkowania?</summary>
+          <div class="faq-a"><p>Zwykle od początku roku podatkowego, w terminach określonych w ustawach. Analizę warto przygotować jesienią, aby zdążyć przed nowym rokiem.</p></div>
+        </details>
+        <details>
+          <summary>Czy przejmiecie księgowość w trakcie roku?</summary>
+          <div class="faq-a"><p>Tak. Przejmujemy księgi od poprzedniego biura, sprawdzamy bilans otwarcia i rozrachunki, a potem kontynuujemy obsługę bez przerwy w terminach.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec" id="kontakt">
+    <div class="wrap contact">
+      <div class="contact-card">
+        <p class="label">Kontakt</p>
+        <h2>Porozmawiajmy <span class="grad">o Twojej firmie</span></h2>
+        <p class="sub">Opisz krótko strukturę firmy. Odpowiemy w ciągu jednego dnia roboczego i zaproponujemy termin rozmowy.</p>
+        <!-- Uzupełnij prawdziwe dane kontaktowe -->
+        <ul class="clist">
+          <li><span class="cic"><svg class="ic"><use href="#i-mail"/></svg></span><div><small>E-mail</small><a href="mailto:biuro.probalance@gmail.com" id="contact-email">biuro.probalance@gmail.com</a></div></li>
+          <li><span class="cic"><svg class="ic"><use href="#i-phone"/></svg></span><div><small>Telefon</small><a href="tel:+48537918612">+48 537 918 612</a></div></li>
+          <li><span class="cic"><svg class="ic"><use href="#i-pin"/></svg></span><div><small>Obszar</small><span>Cała Polska · online i na miejscu</span></div></li>
+        </ul>
+      </div>
+      <form class="form" id="contact-form" novalidate data-endpoint="https://formsubmit.co/ajax/biuro.probalance@gmail.com">
+        <div class="f"><input id="f-name" name="name" autocomplete="name" required placeholder=" "><label for="f-name">Imię i nazwisko</label></div>
+        <div class="f"><input id="f-company" name="company" autocomplete="organization" placeholder=" "><label for="f-company">Firma</label></div>
+        <div class="f"><input id="f-email" name="email" type="email" autocomplete="email" required placeholder=" "><label for="f-email">E-mail</label></div>
+        <div class="f"><select id="f-topic" name="topic">
+            <option>Sprawozdanie skonsolidowane</option><option>Analiza formy opodatkowania</option><option>Pełna księgowość</option><option>Kadry i płace</option><option>Inny temat</option>
+          </select><label for="f-topic" class="static">Temat</label></div>
+        <div class="f wide"><textarea id="f-msg" name="message" rows="4" placeholder=" "></textarea><label for="f-msg">Wiadomość</label><span class="hint">Np. 3 spółki, 2 oddziały, ok. 120 pracowników</span></div>
+        <label class="consent wide" for="f-consent"><input id="f-consent" name="consent" type="checkbox" required><span>Wyrażam zgodę na przetwarzanie danych w celu odpowiedzi na zapytanie.</span></label>
+        <button class="btn btn-primary wide" type="submit">Wyślij zapytanie <svg class="ic"><use href="#i-arrow"/></svg></button>
+        <p class="form-status wide" id="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="#top"><img class="logo" src="assets/logo-markW.png" alt="" width="465" height="414"><span class="brand-t">Pro<b>Balance</b></span></a>
+    <nav class="foot-nav" aria-label="Stopka"><a href="#uslugi">Usługi</a><a href="#kalkulator">Kalkulator</a><a href="#konsolidacja">Konsolidacja</a><a href="#kadry">Kadry</a><a href="#aktualnosci">Aktualności</a><a href="#kontakt">Kontakt</a></nav>
+    <p>© <span id="year">2026</span> ProBalance Biuro Rachunkowe</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Czy obsługujecie firmy z całej Polski?", "acceptedAnswer": { "@type": "Answer", "text": "Tak. Dokumenty przyjmujemy elektronicznie, e-faktury pobieramy z KSeF, a spotkania odbywają się online albo na miejscu u klienta." } },
+    { "@type": "Question", "name": "Kto musi sporządzać skonsolidowane sprawozdanie finansowe?", "acceptedAnswer": { "@type": "Answer", "text": "Jednostka dominująca grupy kapitałowej, o ile nie korzysta ze zwolnienia, np. ze względu na wielkość grupy." } },
+    { "@type": "Question", "name": "Kiedy można zmienić formę opodatkowania?", "acceptedAnswer": { "@type": "Answer", "text": "Zwykle od początku roku podatkowego, w terminach określonych w ustawach. Analizę warto przygotować jesienią." } },
+    { "@type": "Question", "name": "Czy przejmiecie księgowość w trakcie roku?", "acceptedAnswer": { "@type": "Answer", "text": "Tak. Przejmujemy księgi od poprzedniego biura, sprawdzamy bilans otwarcia i rozrachunki, a potem kontynuujemy obsługę bez przerwy w terminach." } }
+  ]
+}
+</script>
+<script src="assets/news.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
