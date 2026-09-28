@@ -72,8 +72,8 @@ main, .hdr, .foot { position: relative; z-index: 1; }
 .btn { isolation: isolate; }
 .btn-primary::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(95deg, var(--acc2), var(--acc)); opacity: 0; transition: opacity .3s; }
 .btn-primary:hover::after { opacity: 1; }
-.btn-ghost { border-color: var(--line); color: var(--ink); background: var(--bg2); }
-.btn-ghost:hover { border-color: var(--acc); color: var(--acc-ink); }
+.btn-ghost { border-color: var(--ink); color: var(--bg); background: var(--ink); }
+.btn-ghost:hover { background: var(--acc-ink); border-color: var(--acc-ink); color: #fff; }
 .btn-dark { background: var(--ink); color: var(--bg); }
 .btn-dark:hover { background: var(--acc-ink); color: #fff; }
 .btn-sm { padding: 10px 18px; font-size: .86rem; }
