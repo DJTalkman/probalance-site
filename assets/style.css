@@ -404,3 +404,12 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 }
 
 .sec-dark .grad, .contact-card .grad { background: linear-gradient(95deg, #3fc4d8, #9eeaf5); -webkit-background-clip: text; background-clip: text; }
+
+/* Logo variant per theme */
+.logo-d { display: none; }
+:root[data-theme="dark"] .logo-l { display: none; }
+:root[data-theme="dark"] .logo-d { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo-l { display: none; }
+  :root:not([data-theme="light"]) .logo-d { display: block; }
+}
