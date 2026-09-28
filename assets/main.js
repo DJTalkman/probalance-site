@@ -110,10 +110,16 @@
   }
 
   /* ---------- Tax calculator (orientacyjny, 2026) ---------- */
-  var inc = $("income"), incOut = $("income-out"), payout = $("payout"), small = $("small"), rycz = $("ryczalt"), out = $("calc-out");
+  var inc = $("income"), incNum = $("income-num"), payout = $("payout"), small = $("small"), rycz = $("ryczalt"), out = $("calc-out");
+  // Slider 0–300 maps piecewise to zł so the scale labels sit exactly at 1/3, 2/3 and the end
+  var ANCH = [[0, 100000], [100, 1000000], [200, 2500000], [300, 5000000]];
+  function sliderToZl(v) { for (var i = 1; i < ANCH.length; i++) if (v <= ANCH[i][0]) { var a = ANCH[i - 1], b = ANCH[i]; return Math.round((a[1] + (v - a[0]) / (b[0] - a[0]) * (b[1] - a[1])) / 10000) * 10000; } return ANCH[ANCH.length - 1][1]; }
+  function zlToSlider(z) { if (z <= ANCH[0][1]) return 0; for (var i = 1; i < ANCH.length; i++) if (z <= ANCH[i][1]) { var a = ANCH[i - 1], b = ANCH[i]; return a[0] + (z - a[1]) / (b[1] - a[1]) * (b[0] - a[0]); } return 300; }
+  var income = 600000;
+  function fmtNum(n) { return Math.round(n).toLocaleString("pl-PL").replace(/\u00a0/g, " "); }
   function solid(d) { return d > 1000000 ? (d - 1000000) * .04 : 0; }
   function calc() {
-    var d = +inc.value, pay = payout.checked, sm = small.checked, rr = +rycz.value;
+    var d = income, pay = payout.checked, sm = small.checked, rr = +rycz.value;
     var res = [];
     // Skala
     var t = d <= 120000 ? Math.max(0, d * .12 - 3600) : 120000 * .12 - 3600 + (d - 120000) * .32;
@@ -130,8 +136,7 @@
     var e = pay ? d * (sm ? .20 : .25) : 0;
     res.push({ name: "Estoński CIT", info: pay ? (sm ? "10% CIT + PIT po odliczeniu ≈ 20%" : "20% CIT + PIT po odliczeniu ≈ 25%") : "0% dopóki zysk zostaje w spółce", tax: e });
     var best = res.reduce(function (a, b) { return b.tax < a.tax ? b : a; });
-    incOut.textContent = pln(d);
-    inc.style.setProperty("--p", ((d - inc.min) / (inc.max - inc.min) * 100) + "%");
+    inc.style.setProperty("--p", (Math.min(300, zlToSlider(d)) / 3) + "%");
     out.innerHTML = res.map(function (r) {
       var net = d - r.tax, pct = r.tax / d * 100;
       return '<div class="res' + (r === best ? " best" : "") + '">' +
@@ -140,7 +145,17 @@
         '<div class="res-val"><strong>' + pln(net) + "</strong><small>podatki " + pln(r.tax) + " · " + pct.toFixed(1).replace(".", ",") + "%</small></div></div>";
     }).join("") + '<div class="calc-legend"><span><i></i>zostaje właścicielom / w firmie</span><span><b></b>podatki i składki</span></div>';
   }
-  if (inc && out) { [inc, payout, small, rycz].forEach(function (el) { el.addEventListener("input", calc); }); calc(); }
+  if (inc && out) {
+    inc.addEventListener("input", function () { income = sliderToZl(+inc.value); incNum.value = fmtNum(income); calc(); });
+    incNum.addEventListener("input", function () {
+      var v = parseInt(String(incNum.value).replace(/[^0-9]/g, ""), 10);
+      if (!isNaN(v) && v >= 1000) { income = v; inc.value = Math.round(zlToSlider(v)); calc(); }
+    });
+    incNum.addEventListener("blur", function () { if (income < 1000) income = 1000; incNum.value = fmtNum(income); });
+    incNum.addEventListener("focus", function () { incNum.select(); });
+    [payout, small, rycz].forEach(function (el) { el.addEventListener("input", calc); });
+    inc.value = Math.round(zlToSlider(income)); incNum.value = fmtNum(income); calc();
+  }
 
   /* ---------- Consolidation steps ---------- */
   var steps = $("steps"), viz = $("viz"), cap = $("viz-cap");

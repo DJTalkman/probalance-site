@@ -37,7 +37,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=202609281037">
+<link rel="stylesheet" href="assets/style.css?v=202609281040">
 </head>
 <body>
 
@@ -65,8 +65,8 @@
 <header class="hdr" id="top">
   <div class="wrap hdr-in">
     <a class="brand" href="#top" aria-label="ProBalance – strona główna">
-      <img class="logo logo-l" src="assets/logo-mark.png?v=202609281037" alt="" width="465" height="414">
-      <img class="logo logo-d" src="assets/logo-markW.png?v=202609281037" alt="" width="465" height="414">
+      <img class="logo logo-l" src="assets/logo-mark.png?v=202609281040" alt="" width="465" height="414">
+      <img class="logo logo-d" src="assets/logo-markW.png?v=202609281040" alt="" width="465" height="414">
       <span class="brand-t">Pro<b>Balance</b></span>
     </a>
     <nav class="nav" id="nav" aria-label="Główna nawigacja">
@@ -204,9 +204,12 @@
       <div class="calc">
         <div class="calc-ctrl">
           <div class="field-range">
-            <div class="range-head"><label for="income">Roczny dochód (zysk) firmy</label><output id="income-out" for="income">600 000 zł</output></div>
-            <input type="range" id="income" min="100000" max="5000000" step="10000" value="600000">
+            <div class="range-head"><label for="income-num">Roczny dochód (zysk) firmy</label>
+              <div class="amount"><input type="text" inputmode="numeric" id="income-num" value="600 000" aria-label="Kwota dochodu w złotych"><span>zł</span></div>
+            </div>
+            <input type="range" id="income" min="0" max="300" step="1" value="56" aria-label="Suwak dochodu">
             <div class="range-scale"><span>100 tys.</span><span>1 mln</span><span>2,5 mln</span><span>5 mln</span></div>
+            <p class="range-hint">Wpisz kwotę ręcznie lub przesuń suwak. Kwoty powyżej 5 mln zł wpisz w polu.</p>
           </div>
           <div class="toggles">
             <label class="switch"><input type="checkbox" id="payout" checked><span class="sw"></span><span>Wypłacam cały zysk właścicielom</span></label>
@@ -372,7 +375,7 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <a class="brand" href="#top"><img class="logo" src="assets/logo-markW.png?v=202609281037" alt="" width="465" height="414"><span class="brand-t">Pro<b>Balance</b></span></a>
+    <a class="brand" href="#top"><img class="logo" src="assets/logo-markW.png?v=202609281040" alt="" width="465" height="414"><span class="brand-t">Pro<b>Balance</b></span></a>
     <nav class="foot-nav" aria-label="Stopka"><a href="#uslugi">Usługi</a><a href="#kalkulator">Kalkulator</a><a href="#konsolidacja">Konsolidacja</a><a href="#kadry">Kadry</a><a href="#aktualnosci">Aktualności</a><a href="#kontakt">Kontakt</a></nav>
     <p>© <span id="year">2026</span> ProBalance Biuro Rachunkowe</p>
   </div>
@@ -390,7 +393,7 @@
   ]
 }
 </script>
-<script src="assets/news.js?v=202609281037"></script>
-<script src="assets/main.js?v=202609281037"></script>
+<script src="assets/news.js?v=202609281040"></script>
+<script src="assets/main.js?v=202609281040"></script>
 </body>
 </html>
